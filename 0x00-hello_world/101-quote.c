@@ -6,7 +6,7 @@
  *
  *main - Entry point
  *
- *     *
+ *
  *
  *       * Return: 1 on success
  */
