@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * Description: print_to_98 - printing numbers to 98, separated by a column
- *
- * @n: counter.
+ * print_to_98 - prints natural
+ * numbers from n to 98
+ * @n:integer to start by
+ * return: returns nothing
  */
-void main(int n)
+void print_to_98(int n)
 {
 	int i;
 
