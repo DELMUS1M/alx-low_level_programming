@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
  * Description: print_to_98 - printing numbers to 98, separated by a column
  *
  * @n: counter.
