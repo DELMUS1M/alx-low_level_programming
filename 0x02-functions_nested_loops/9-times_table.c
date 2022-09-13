@@ -4,6 +4,7 @@
  * times_table - times table function
  *
  * Description  'the program prints from 0 to 9'
+ *
  */
 void times_table(void)
 {
