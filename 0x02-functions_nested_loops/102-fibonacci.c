@@ -1,29 +1,26 @@
 #include <stdio.h>
 /**
- * main - main function
- *
- * Return: nothing
+ * main - prints out first 50
+ * fibonacci suit numbers
+ * Return: return 0
  */
 int main(void)
 {
-	int counter = 2;
-	long int a = 1;
-	long int b = a + 1;
-	long int c = a + b;
-
-	printf("%ld, %ld, ", a, b);
-	while (counter < 50)
+	int inc;
+	unsigned long n1 = 0, n2 = 1, n3;
+	for (inc = 0; inc < 50; inc++)
 	{
-		printf("%ld", c);
-		counter++;
-		a = b;
-		b = c;
-		c = a + b;
-		if (counter < 50)
-		{
+		n3 = n1 + n2;
+		printf("%lu", n3);
+		n1 = n2;
+		n2 = n3;
+
+		if (inc == 49)
+			printf("\n");
+		else
 			printf(", ");
-		}
-		printf("\n");
-		return (0);
+
 	}
+
+	return (0);
 }
