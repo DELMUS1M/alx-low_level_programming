@@ -4,7 +4,7 @@
   *
   * Return: Nothing.
   */
-void times_table(void)
+void 9-times_table.c(void)
 {
 	int i, j, res;
 
