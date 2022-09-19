@@ -4,22 +4,39 @@
  * _atoi - converts a string to an int
  * @s: the string to be changed
  *
- * Return: the converted int
+ * Return: integer
  */
 
 int _atoi(char *s)
 {
-	int sign = 1;
-	unsigned int num = 0;
+	int i, j, p;
+	unsigned int n;
+	char c;
 
+	i = 0;
+	while (*(s + i))
 	{
-		if (*s == '-')
-			sign *= -1;
-		else if (*s >= '0' && *s <= '9')
-			num = num * 10 + (*s - '0');
-		else if (num > 0)
+		i++;
+	}
+	i--;
+	n = 0;
+	p = 1;
+	for (j = 0; j <= i; j++)
+	{
+		c = *(s + j);
+		if (c == '-')
+		{
+			p *= -1;
+		}
+		else if (c >= '0' && c <= '9')
+		{
+			n = n * 10 + (c - '0');
+		}
+		else if (n > 0)
+		{
 			break;
-	} while (*s++);
+		}
+	}
 
-		return (num * sign);
+	return (p * n);
 }
