@@ -55,7 +55,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			val1 = *(n1 + i) - '0';
 		if (j < 0)
-			va12 = 0;
+			val2 = 0;
 		else
 			val2 = *(n2 + j) - '0';
 		temp_tot = val1 + val2 + overflow;
