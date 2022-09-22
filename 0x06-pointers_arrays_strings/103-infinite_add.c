@@ -1,47 +1,47 @@
 #include "main.h"
 
 /**
- * infinite_add - adds two numbers
- * @n1: first number
- * @n2: second number
- * @r: buffer for result
- * @size_r: buffer size
+ * infinite_add - add two numbers.
  *
- * Return: address of r or 0
+ * @n1: first number.
+ * @n2: second number.
+ * @r: result.
+ * @size_r: result size.
+ * Return: the addition of n1 and n2.
  */
+
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, l, m, n;
+	int add = 0, len1, len2, i, j;
 
-	for (i = 0; n1[i]; i++)
+	for (len1 = 0; n1[len1]; len1++)
 		;
-	for (j = 0; n2[j]; j++)
+	for (len2 = 0; n2[len2]; len2++)
 		;
-	if (i > size_r || j > size_r)
+	if (len1 > size_r || len2 > size_r)
 		return (0);
-	m = 0;
-	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
+	len1--;
+	len2--;
+	size_r--;
+	for (i = 0; i < size_r; i++, len1--, len2--)
 	{
-		n = m;
-		if (i >= 0)
-			n += n1[i] - '0';
-		if (j >= 0)
-			n += n2[j] - '0';
-		if (i < 0 && j < 0 && n == 0)
-		{
+		if (len1 >= 0)
+			add += n1[len1] - '0';
+		if (len2 >= 0)
+			add += n2[len2] - '0';
+		if (len1 < 0 && len2 < 0 && add == 0)
 			break;
-		}
-		m = n / 10;
-		r[k] = n % 10 + '0';
+		r[i] = add % 10 + '0';
+		add /= 10;
 	}
-	r[k] = '\0';
-	if (i >= 0 || j >= 0 || m)
+	r[i] = '\0';
+	if (len1 >= 0 || len2 >= 0 || add)
 		return (0);
-	for (k -= 1, l = 0; l < k; k--, l++)
+	for (i--, j = 0; i > j; i--, j++)
 	{
-		m = r[k];
-		r[k] = r[l];
-		r[l] = m;
+		add = r[i];
+		r[i] = r[j];
+		r[j] = add;
 	}
 	return (r);
 }
