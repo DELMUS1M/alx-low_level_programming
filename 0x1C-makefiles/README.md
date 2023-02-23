@@ -84,6 +84,6 @@ Used for Makefile practice purposes throughout project.
     * Works even if there are existing files of the same name as any of the
     Makefile rules in the current directory.
 
-## #AUTHOR
-##OGORA DELMUS MOCHECHE
-##DELMUS1M
+## AUTHOR
+## OGORA DELMUS MOCHECHE
+## DELMUS1M
